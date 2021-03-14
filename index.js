@@ -12,7 +12,7 @@ app.get('/', (req, res)=> {
 app.get('/cadastro', (req, res)=> {
   const { nome , idade} = req.query
   if(!nome || !idade){
-    res.json({message: "impossivel cadastrar"})
+   return res.json({message: "impossivel cadastrar"})
   }
   player.push({nome, idade})
   res.json({message: "cadastro efetuado com sucesso"})
