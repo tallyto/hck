@@ -4,9 +4,9 @@ const express = require('express')
 
 const app = express();
 const player = []
-
+app.use(express.static('public'));
 app.get('/', (req, res)=> {
-  res.send("<h1>HACKERS ORG</h1>")
+  res.sendFile("index.html")
 })
 
 app.get('/cadastro', (req, res)=> {
